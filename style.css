@@ -1,0 +1,20 @@
+section.hero.is-bold{
+    background-image: url("Images/bedge_grunge.png");
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.section.is-bold{
+    background-image: url("Images/banner.jpg");
+    background-color: tan;
+    background-repeat: no-repeat;
+    background-position: center center;
+   
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+}
+
+.is-horizontal-center {
+    justify-content: center;
+  }

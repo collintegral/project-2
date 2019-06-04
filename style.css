@@ -7,7 +7,7 @@ section.hero.is-bold{
 
 .section.is-bold{
     background-image: url("Images/banner.jpg");
-    background-color: tan;
+    background-color: silver;
     background-repeat: no-repeat;
     background-position: center center;
    
@@ -18,3 +18,10 @@ section.hero.is-bold{
 .is-horizontal-center {
     justify-content: center;
   }
+
+  .has-image-centered {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+

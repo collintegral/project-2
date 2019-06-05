@@ -25,3 +25,6 @@ section.hero.is-bold{
     justify-content: center;
   }
 
+  body {
+    padding: 40px;
+  }

@@ -28,3 +28,8 @@ section.hero.is-bold{
   body {
     padding: 40px;
   }
+
+  article {
+      width: 100%;
+      background-color: aliceblue;
+  }

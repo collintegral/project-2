@@ -18,3 +18,5 @@ $('.navbar-burger').click(function () {
        });
     });
   });
+
+  $( '.sidebar' ).fixedsticky();

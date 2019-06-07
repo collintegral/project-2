@@ -1,8 +1,9 @@
+//Activates navbar burger when viewing on mobile
 $('.navbar-burger').click(function () {
     $('#navbarBasicExample, .navbar-burger').toggleClass('is-active');
   });
   
-
+//JS for modal
   $('.modal').click(function (){
       $('.modal').toggleClass('is-active');
   });
@@ -18,3 +19,5 @@ $('.navbar-burger').click(function () {
        });
     });
   });
+
+  $( '.sidebar' ).fixedsticky();

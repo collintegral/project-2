@@ -33,3 +33,13 @@ section.hero.is-bold{
       width: 100%;
       background-color: aliceblue;
   }
+
+  .menu-list {
+      position: fixed;
+      float:left;
+  }
+
+  .fixedsticky {
+    top: 0;
+}
+  

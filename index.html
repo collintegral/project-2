@@ -13,9 +13,9 @@
 
 <body>
     <section class="section is-fullheight is-bold">
-        <div class="container is-horizontal-center">
+        <!-- <div class="container is-horizontal-center">
             <img src="Images/oie_4185559SnUUwQFG.png" alt="Dungeon Master Screen">
-        </div>
+        </div> -->
     </section>
 
 
@@ -52,15 +52,14 @@
         <!--Modal code outline found at https://codepen.io/anon/pen/zJyyaW-->
 
         <div id="app">
-            <aside class="column is-2 is-narrow-mobile is-fullheight section is-pulled-left">
-                <ul class="menu-list fixed-z">
 
-                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                        data-target="navbarBasicExample">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
+                <div class="sidebar sticky">
+
+
+            <aside class="column is-2 is-narrow-mobile is-fullheight section is-pulled-left">
+                <ul class="menu-list sidebar fixedsticky">
+
+                   
 
                     <li class="has-background-light">
                         <p>Navigation</p>
@@ -78,8 +77,17 @@
                             <span class="icon"><i class="fa fa-info "></i></span> Memos/Notes
                         </a>
                     </li>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
                 </ul>
+            
             </aside>
+
+            </div>
 
 
             <div class="columns is-mobile">
@@ -204,6 +212,26 @@
                                 </a>
                             </p>
                         </article>
+                        <article class="message is-pulled-right">
+                                <div class="message-header">
+                                    <p>Flying</p>
+                                </div>
+                                <div class="message-body">
+                                    The rules for fighting in the air stress abstraction and
+                                    simplicity over simulation. In real life, a flying creature’s ability to turn, the speed
+                                    it must maintain to stay
+                                    aloft, and other factors put a strict limit on flight.
+                                </div>
+                                <p class="buttons">
+                                    <a href="https://www.dandwiki.com/wiki/SRD:Fly" class="button button is-dark">
+                                        <span>View Full Rule</span>
+                                    </a>
+                                    <a href="#" class="button button is-dark">
+                                        <i class="fas fa-crown"></i>
+                                        <span>Favorite Rule</span>
+                                    </a>
+                                </p>
+                            </article>
                     </div>
                 </div>
             </div>

@@ -1,24 +1,38 @@
-var db = require("../models");
+const db = require("../models");
+const auth = require("../auth.js");
 
-module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+module.exports = (app) => {
+  // Get all rules
+  app.get("/api/rules", (req, res) => {
+    db.dungeonDB.dungeonDB.Rule.findAll({}).then(result => {
+      res.json(result);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // Get all memos
+  app.get("/api/memos", (req, res) => {
+    db.dungeonDB.dungeonDB.Memo.findAll({where: { userID: auth.userID }}).then(result => {
+      res.json(result);
+    })
+  })
+  // Create a new memo
+  app.post("/api/newmemo", (req, res) => {
+    db.dungeonDB.dungeonDB.Memo.create(req.body).then(result => {
+      res.json(result);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  // Edit a memo by id
+  app.put("/api/memos/:id", (req, res) => {
+    db.dungeonDB.dungeonDB.Memo.update(req.body, { where: { id: req.params.id } }).then(result => {
+      res.json(result);
+    });
+  });
+
+  // Delete a memo by id
+  app.delete("/api/gonememo/:id", (req, res) => {
+    db.dungeonDB.dungeonDB.Memo.destroy({ where: { id: req.params.id } }).then(result => {
+      res.json(result);
     });
   });
 };

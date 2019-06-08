@@ -1,20 +1,20 @@
 //Activates navbar burger when viewing on mobile
-$('.navbar-burger').click(function () {
+$('.navbar-burger').click(() => {
     $('#navbarBasicExample, .navbar-burger').toggleClass('is-active');
   });
   
 //JS for modal
-  $('.modal').click(function (){
+  $('.modal').click(() => {
       $('.modal').toggleClass('is-active');
   });
 
-  document.querySelectorAll('.modal-button').forEach(function(el) {
-    el.addEventListener('click', function() {
+  document.querySelectorAll('.modal-button').forEach(el => {
+    el.addEventListener('click',() => {
       var target = document.querySelector(el.getAttribute('data-target'));
       
       target.classList.add('is-active');
       
-      target.querySelector('.modal-close').addEventListener('click',   function() {
+      target.querySelector('.modal-close').addEventListener('click',() => {
           target.classList.remove('is-active');
        });
     });

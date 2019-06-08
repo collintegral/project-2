@@ -1,40 +1,40 @@
 module.exports = (sequelize, DataTypes) => {
-  const dungeonDB = {
+  var dungeonDB = {
     Rule: sequelize.define("rules", {
       title: {
-        type: Datatypes.STRING,
+        type: DataTypes.STRING,
         unique: true,
         allowNull: false
       },
       description: {
-        type: Datatypes.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false
       }
     }),
 
     User: sequelize.define("users", {
       firebase_id: {
-        type: Datatypes.STRING,
+        type: DataTypes.STRING,
         unique: true,
         allowNull: false
       },
       rule_id_list: {
-        type: Datatypes.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false
       }
     }),
 
     Memo: sequelize.define("memo", {
       title: {
-        type: Datatypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false
       },
       message: {
-        type: Datatypes.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false
       },
       user_id: {
-        type: Datatypes.VARCHAR,
+        type: DataTypes.INTEGER,
       }
     })
   }

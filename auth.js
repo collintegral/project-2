@@ -42,8 +42,8 @@ const auth = {
         });
     },
 
-    loggedIn,
-    userID,
+    loggedIn: false,
+    userID: "",
     watchState: () => {
         firebase.auth().onAuthStateChanged(user => {
             if (user) { loggedIn = true; }

@@ -11,7 +11,7 @@ module.exports = (app) => {
 
   // Get all memos
   app.get("/api/memos", (req, res) => {
-    db.dungeonDB.dungeonDB.Memo.findAll({where: { user_id: auth.userID }}).then(result => {
+    db.dungeonDB.dungeonDB.Memo.findAll({ where: { user_id: auth.userID } }).then(result => {
       res.json(result);
     })
   })
@@ -34,16 +34,16 @@ module.exports = (app) => {
       res.json(result);
     });
   });
+
+  // Retrieve user's information
+  app.get("/api/user", (req, res) => {
+    db.dungeonDB.dungeonDB.User.findOne({ where: { firebase_id: auth.userID } }).then(result => {
+      res.json(result);
+    })
+  });
+
+  // Update user's information
+  app.put("/api/updateuser", (req, res) => {
+    db.dungeonDB.dungeonDB.user.update(req.body, { where: { firebase_id: auth.userID } });
+  });
 };
-
-// Retrieve user's information
-app.get("/api/user", (req, res) => {
-  db.dungeonDB.dungeonDB.User.findOne({where: {firebase_id: auth.userID }}).then(result => {
-    res.json(result);
-  })
-});
-
-// Update user's information
-app.put("/api/updateuser", (req, res) => {
-  db.dungeonDB.dungeonDB.user.update(req.body, { where: { firebase_id: auth.userID }});
-})

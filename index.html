@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    
     <title>D&D Screen Screen</title>
 </head>
 
@@ -52,15 +54,21 @@
         <!--Modal code outline found at https://codepen.io/anon/pen/zJyyaW-->
 
         <div id="app">
-
-                <div class="sidebar sticky">
+                <a role="button" class="navbar-burger burger is-pulled-left" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+               
+                <div class="sidebar sticky is-mobile">
 
 
             <aside class="column is-2 is-narrow-mobile is-fullheight section is-pulled-left">
+                  
                 <ul class="menu-list sidebar fixedsticky">
 
                    
-
                     <li class="has-background-light">
                         <p>Navigation</p>
                     </li>
@@ -77,12 +85,7 @@
                             <span class="icon"><i class="fa fa-info "></i></span> Memos/Notes
                         </a>
                     </li>
-                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+                 
                 </ul>
             
             </aside>
@@ -241,7 +244,7 @@
 
 
 
-    <script src="javascript.js"></script>
+    <script src="public/js/index.js"></script>
 
 </body>
 

@@ -1,6 +1,6 @@
 var db = require("../models");
 
-module.exports = app => {
+module.exports = (app) => {
   // Load index page
   app.get("/", (req, res) => {
     db.Rule.findAll({}).then(err, dbRules => {

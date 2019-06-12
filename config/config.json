@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": " ",
+    "password": "Liam2012",
     "database": "dungeon_db",
     "host": "localhost",
     "dialect": "mysql"

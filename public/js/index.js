@@ -125,3 +125,16 @@ document.querySelectorAll(".modal-button").forEach(el => {
     });
   });
 });
+
+//JS for memo add
+app.post("/textareaa", function(req, res) {
+ 
+ 
+  var newMemo = req.body;
+
+  console.log(newMemo);
+
+  characters.push(newMemo);
+
+  res.json(newMemo);
+});

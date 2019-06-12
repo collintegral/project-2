@@ -1,0 +1,65 @@
+section.hero.is-bold{
+    background-image: url("Images/bedge_grunge.png");
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.section.is-bold{
+    background-image: url("Images/banner.jpg");
+    background-color: silver;
+    background-repeat: no-repeat;
+    background-position: center center;
+   
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+}
+
+.is-horizontal-center {
+    justify-content: center;
+  }
+
+  .has-image-centered {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  body {
+    padding: 40px;
+  }
+
+  article {
+      width: 100%;
+      background-color: aliceblue;
+  }
+
+  .menu-list {
+      position: fixed;
+      float:left;
+  }
+
+  .fixedsticky {
+    top: 0;
+}
+  
+.burger{
+    display: none !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+@media only screen and (max-width:768px) {
+    .burger {
+        display: block !important;
+    
+    }
+    .sidebar {
+        display: none;
+        position: absolute;
+        top: 0;
+    }
+}
+

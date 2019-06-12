@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
@@ -26,7 +26,12 @@
             <div class="modal-background"></div>
             <div class="modal-content">
                 <div class="box"><a href="#" class="has-background-light">
-                        <span class="icon"><i class="fas fa-sign-in-alt"></i>
+                        <input class="input" type="text" placeholder="Username">
+                        <input class="input" type="text" placeholder="Password">
+                        <span class="icon">
+                            <i class="fas fa-sign-in-alt">
+                            </i>
+                            <a class="button">Log In</a>
                         </span>
                     </a>
                 </div>
@@ -34,10 +39,30 @@
             <button class="modal-close is-large" aria-label="close"></button>
         </div>
 
+        <div class="modal" id="myModal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="box"><a href="#" class="has-background-light">
+                            <input class="input" type="text" placeholder="Username">
+                            <input class="input" type="text" placeholder="Password">
+                            <input class="input" type="text" placeholder="Confirm Password">
+                            <span class="icon">
+                                <i class="fas fa-sign-in-alt">
+                                </i>
+                                <a class="button">Make an Account</a>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+    
 
         <figure class="has-image-centered">
-            <img src="Images/LogoMakr_7jJgLK.png" width="100" height="50" alt="Rules">
+            <img src="Images/LogoMakr_0st7AS.png" width="100" height="50" alt="Memos">
         </figure>
+
+
 
         <!-- 
         <h1 class="title is-horizontal-center">
@@ -47,8 +72,7 @@
         <!-- <figure class="has-image-centered">
                 <img src="Images/LogoMakr_7jJgLK.png" width="200" height="100" alt="Rules">
               </figure> -->
-        <button class="button  modal-button button is-dark" data-target="#myModal" aria-haspopup="true">Log in/Log
-            out</button>
+
         <!--Modal code outline found at https://codepen.io/anon/pen/zJyyaW-->
 
         <div id="app">
@@ -95,71 +119,24 @@
                     <div class="column">
 
 
-                        <article class="message is-pulled-right">
+                        <article class="message is-pulled-right is-paddingless">
                             <div class="field">
                                 <label class="label">Title</label>
                                 <div class="control">
-                                    <input class="input" type="text" >
+                                    <input class="input" type="text">
                                 </div>
                             </div>
 
                             <div class="field">
                                 <label class="label">Message</label>
                                 <div class="control">
-                                    <textarea class="textarea" ></textarea>
+                                    <textarea class="textarea"></textarea>
                                 </div>
                             </div>
-
+                            <button class="button modal-button button is-dark" data-target="#myModal"
+                                aria-haspopup="true">Edit</button>
                         </article>
-                        <article class="message is-pulled-right">
-                                <div class="field">
-                                    <label class="label">Title</label>
-                                    <div class="control">
-                                        <input class="input" type="text" >
-                                    </div>
-                                </div>
-    
-                                <div class="field">
-                                    <label class="label">Message</label>
-                                    <div class="control">
-                                        <textarea class="textarea" ></textarea>
-                                    </div>
-                                </div>
-    
-                            </article>
-                            <article class="message is-pulled-right">
-                                    <div class="field">
-                                        <label class="label">Title</label>
-                                        <div class="control">
-                                            <input class="input" type="text" >
-                                        </div>
-                                    </div>
-        
-                                    <div class="field">
-                                        <label class="label">Message</label>
-                                        <div class="control">
-                                            <textarea class="textarea" ></textarea>
-                                        </div>
-                                    </div>
-        
-                                </article>
-                                <article class="message is-pulled-right">
-                                        <div class="field">
-                                            <label class="label">Name</label>
-                                            <div class="control">
-                                                <input class="input" type="text" >
-                                            </div>
-                                        </div>
-            
-                                        <div class="field">
-                                            <label class="label">Message</label>
-                                            <div class="control">
-                                                <textarea class="textarea" ></textarea>
-                                            </div>
-                                        </div>
-            
-                                    </article>
-                        
+
                     </div>
                 </div>
             </div>
@@ -169,7 +146,7 @@
 
 
 
-    <script src="javascript.js"></script>
+    <script src="public/js/index.js"></script>
 
 </body>
 

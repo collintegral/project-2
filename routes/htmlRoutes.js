@@ -1,19 +1,14 @@
-var db = require("../models");
+const db = require("../models");
 
 module.exports = (app) => {
   // Load index page
   app.get("/", (req, res) => {
-    db.Rule.findAll({}).then(err, dbRules => {
-      if (err) {
-        console.log(err);
-      }
-      if (dbRules) {
-        console.log(dbRules);
-      }
+
+    db.rules.findAll({}).then(result => {
       res.render("index", {
         Title: "DungeonDB",
-        Rule: dbRules.title,
-        Description: dbRules.description
+        Rule: result.title,
+        Description: result.description
       });
     });
   });

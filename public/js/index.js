@@ -126,6 +126,23 @@ document.querySelectorAll(".modal-button").forEach(el => {
   });
 });
 
+//for posting memos
+$("#post").click(() => {
+
+});
+//for editing memos
+$("#edit").click(() => {
+
+});
+//for clicking on sidebar
+$(".buttons").click(() => {
+
+});
+//for adding favorites
+$("#favorite").click(() => {
+
+});
+
 
 
 //JS for memo add

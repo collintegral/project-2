@@ -5,7 +5,8 @@ module.exports = app => {
   app.get("/", (req, res) => {
     db.rules.findAll({}).then(dbRules => {
       res.render("index", {
-        Rule: dbRules.title
+        Rule: dbRules.title,
+        Description: dbRules.Description
       });
     });
   });

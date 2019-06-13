@@ -63,3 +63,6 @@ section.hero.is-bold{
     }
 }
 
+#confpassword{
+    visibility: hidden;
+}

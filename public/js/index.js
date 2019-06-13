@@ -99,6 +99,9 @@
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 //Activates navbar burger when viewing on mobile
+const auth = require("../../auth");
+auth.initialize();
+
 $(".navbar-burger").click(() => {
   if ($(".sidebar").css("display") == "block") {
     console.log("close menu");
@@ -110,8 +113,8 @@ $(".navbar-burger").click(() => {
 });
 
 //JS for modal
-$(".modal").click(() => {
-  $(".modal").toggleClass("is-active");
+$(".modal").on("click", () => {
+    $(".modal").toggleClass("is-active");
 });
 
 document.querySelectorAll(".modal-button").forEach(el => {
@@ -126,12 +129,45 @@ document.querySelectorAll(".modal-button").forEach(el => {
   });
 });
 
+let login = true;
+auth.watchState();
+if (auth.loggedIn === true) {
+  $("#modalbtn").innerText = "Log Out";
+}
 
+$("#signupbtn").on("click", () => {
+  if (login) {
+    $("#confpassword").attr("visibility", "visible");
+    $("#loginbtn").attr("visibility", "hidden");
+    login = false;
+  }
+  else {
+    const username = $("#email").val().trim();
+    const password = $("#password").val().trim();
+    const confpassword = $("#confpassword").val().trim();
+    if (password === confpassword) {
+      auth.newUser(username, password);
+      $(".modal").toggleClass("is-active");
+      $("#modalbtn").innerText = "Log Out";
+    }
+    else {
+      alert("Error: passwords do not match. Please try again.");
+    }
+  }
+});
+
+$("#loginbtn").on("click", () => {
+  const username = $("#email").val().trim();
+  const password = $("#password").val().trim();
+  auth.login(username, password);
+  $(".modal").toggleClass("is-active");
+  $("#modalbtn").innerText = "Log Out";
+});
 
 //JS for memo add
-app.post("/textareaa", function(req, res) {
- 
- 
+app.post("/textarea", (req, res) => {
+
+
   var newMemo = req.body;
 
   console.log(newMemo);

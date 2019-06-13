@@ -16,7 +16,7 @@ const auth = {
     },
 
     //when the user submits their new account info, this will be triggered, and automatically sign them in on success.
-    newUser: () => {
+    newUser: (email, password) => {
         firebase.auth().createUserWithEmailAndPassword(email, password).catch(err => {
             const errorCode = err.code;
             const errorMessage = err.message;
@@ -25,7 +25,7 @@ const auth = {
     },
 
     //when the user submits their existing account info, this will be triggered, and automatically sign them in on success.
-    login: () => {
+    login: (email, password) => {
         firebase.auth().signInWithEmailAndPassword(email, password).catch(err => {
             const errorCode = err.code;
             const errorMessage = err.message;

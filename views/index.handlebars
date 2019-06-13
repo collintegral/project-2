@@ -17,7 +17,44 @@
     <img src="Images/LogoMakr_7jJgLK.png" width="100" height="50" alt="Rules">
   </figure>
 
-  <button class="button modal-button is-dark" data-target="#myModal" aria-haspopup="true">Log In/Log Out</button>
+  <div id="login">
+    <div class="login-card">
+
+      <div class="card-title">
+        <h1>Please Sign In</h1>
+        <h1>Please Sign Up</h1>
+      </div>
+
+      <div class="content">
+        <form method="POST" action="#">
+
+          <input id="email" type="email" name="email" title="email" placeholder="Email" required autofocus>
+          <input id="password" type="password" name="password" title="password" placeholder="Password" required>
+
+          <div class="level options">
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+      <div class="content">
+        <form method="POST" action="#">
+          <input id="password" type="password" name="password" title="password" placeholder="Verify Password" required>
+
+          <div class="level options">
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </a>
+  </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <button class="button  modal-button button is-dark" data-target="#myModal" aria-haspopup="true">Log in/Sign Up
+  </button>
 
   <div id="app">
     <a role="button" class="navbar-burger burger is-pulled-left" aria-label="menu" aria-expanded="false"
@@ -48,13 +85,13 @@
         </ul>
       </aside>
     </div><!-- SideBar-->
-    </div>
-    <div class="columns is-mobile">
-      <div class="is-flex-mobile">
-        <div class="column">
+  </div>
+  <div class="columns is-mobile">
+    <div class="is-flex-mobile">
+      <div class="column">
 
-  </div>
-  </div>
+      </div>
+    </div>
   </div>
 </section>
 <script src="public/js/index.js"></script>

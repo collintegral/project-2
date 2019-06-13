@@ -129,6 +129,25 @@ document.querySelectorAll(".modal-button").forEach(el => {
   });
 });
 
+<<<<<<< HEAD
+//for posting memos
+$("#post").click(() => {
+
+});
+//for editing memos
+$("#edit").click(() => {
+
+});
+//for clicking on sidebar
+$(".buttons").click(() => {
+
+});
+//for adding favorites
+$("#favorite").click(() => {
+
+});
+
+=======
 let login = true;
 auth.watchState();
 if (auth.loggedIn === true) {
@@ -155,6 +174,7 @@ $("#signupbtn").on("click", () => {
     }
   }
 });
+>>>>>>> b4d6dc21da9e6418df5e734d496190178f107de8
 
 $("#loginbtn").on("click", () => {
   const username = $("#email").val().trim();
